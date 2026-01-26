@@ -1,1 +1,3 @@
-cecei est un readme
+# Lab personnel GNS3 & VMware
+
+(en cours)
