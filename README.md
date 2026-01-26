@@ -8,7 +8,8 @@
 
 - [Mise en place](01-mise-en-place.md)
 
-  1. Mise en place & installation des machines virtuelles
+  1. Environnement technique
+  2. Création des templates
   
 - [Configurer un service DHCP](02-dhcp.md)
   
