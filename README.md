@@ -2,7 +2,7 @@
 
 ## 📝​ À propos
 
-🎓​ Titulaire d'une BTS SIO option SLAM
+🎓​ Titulaire d'un BTS SIO option SLAM
 
 👨🏻‍💻​ Ancien développeur
 
