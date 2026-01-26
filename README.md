@@ -1,4 +1,4 @@
-# (⚠️ EN COURS DE CRÉATION ⚠️ ) Lab personnel GNS3 & VMware
+# ⚠️ (EN COURS DE CRÉATION) Lab personnel GNS3 & VMware
 
 ## Objectifs
 
@@ -15,7 +15,7 @@
   1. Installation et configuration d'un service DHCP <br>
   2. Vérification du fonctionnement du service DHCP
   
-- [Structuration du réseau en VLAN](03-VLAN.md)
+- [Structuration du réseau en VLAN](03-vlan.md)
   
   1. Teste d’une configuration non persistante pour le VLAN 10 <br>
   2. Déploiement d’une configuration persistante & ajout du VLAN 20 <br>
