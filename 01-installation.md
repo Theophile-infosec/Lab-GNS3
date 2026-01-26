@@ -1,4 +1,4 @@
-# I./ Installation du réseau de base
+# I./ Mise en place de l’environnement du laboratoire
 
 ## A. Objectifs :
 
