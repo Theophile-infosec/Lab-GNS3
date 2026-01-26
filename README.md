@@ -6,7 +6,7 @@
 
 ## Documentation technique
 
-- [Installation](01-installation.md)
+- [Mise en place](01-mise-en-place.md)
 
   1. Mise en place & installation des machines virtuelles
   
