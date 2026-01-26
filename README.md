@@ -11,31 +11,31 @@
 
 ## 🧠 Bases techniques en Cybersécurité
 
-Réseaux :
+### Réseaux :
 
 ● Protocoles  
 ● Subnetting & routage inter-VLAN  
 ● Analyse de paquets
 
-Windows :
+### Windows :
 
 ● Gestion utilisateurs et permissions    
 ● Active Directory    
 ● PowerShell
 
-Linux :
+### Linux :
 
 ● Ligne de commandes (Bash)    
 ● Déploiement de services DHCP et DNS    
 ● Gestion des permissions
 
-Sécurité :
+### Sécurité :
 
 ● Configuration nftables   
 ● Filtrage stateful & isolation VLAN    
 ● Matasploit & reverse shell
 
-Web :
+### Web :
 
 ● HTTP/HTTPS    
 ● Burp Suite    
