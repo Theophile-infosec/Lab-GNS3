@@ -1,5 +1,4 @@
-# Configuration d'un service DHCP
-<br>
+# Configuration d'un service DHCP<br>
 <br>
 
 # Objectifs :
