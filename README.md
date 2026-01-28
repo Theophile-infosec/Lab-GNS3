@@ -13,8 +13,10 @@
   
 - [Configurer un service DHCP](02-dhcp.md)
   
-  1. Installation et configuration d'un service DHCP <br>
-  2. Vérification du fonctionnement du service DHCP
+  1. Préparation du serveur <br>
+  2. Installation du serveur DHCP <br>
+  3. Configuration du serveur DHCP <br>
+  4. Vérification du fonctionnement
   
 - [Structuration du réseau en VLAN](03-vlan.md)
   
