@@ -20,9 +20,12 @@
   
 - [Structuration du réseau en VLAN](03-vlan.md)
   
-  1. Teste d’une configuration non persistante pour le VLAN 10 <br>
-  2. Déploiement d’une configuration persistante & ajout du VLAN 20 <br>
-  3. Adaptation de la configuration VLAN et du service DHCP côté serveur
+  1. Mise en place d’un VLAN 10 (configuration non persistante)
+  2. Mise en place d’un switch Linux (Bridge)
+  3. Vérification du fonctionnement de la configuration non persistante
+  4. Configuration persistante du switch Linux
+  5. Adaptation du serveur DHCP aux VLAN
+  6. Vérification fonctionnelle
   
 - [Déploiement du service DNS](04-dns.md)
   
