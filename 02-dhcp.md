@@ -95,7 +95,7 @@ Capture d'écran : <br>
 
 
 
-## II. Installation du serveur DHCP :
+## II. Installation du serveur DHCP
 
 ### 1. Mise à jour des paquets
 
@@ -114,7 +114,7 @@ Commande : *sudo apt install isc-dhcp-server*
 <br>
 
 
-## III. Configuration du serveur DHCP :
+## III. Configuration du serveur DHCP
 
 ### 1. Déclaration de l’interface d’écoute
 
@@ -183,7 +183,7 @@ Capture d'écran : <br>
 <br>
 <br>
 
-## IV. Vérification du fonctionnement :
+## IV. Vérification du fonctionnement
 
 ### 1. Vérification côté client Linux
 
