@@ -6,7 +6,7 @@ Ce laboratoire consiste à concevoir et sécuriser une infrastructure réseau vi
 
 Il couvre :
 - Déploiement d’un serveur DHCP et DNS.
-- Segmentation du réseau via VLANs (802.1Q).
+- Segmentation du réseau via VLAN (802.1Q).
 - Mise en place d’un switch Linux et d’un pare-feu inter-VLAN (nftables).
 - Adaptation des services à une architecture multi-VLAN.
 - *Durcissement des systèmes Linux et Windows.* (⏳​ en cours de développement)
