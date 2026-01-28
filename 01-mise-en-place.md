@@ -11,7 +11,8 @@ Il consiste à :
 - installer les différentes machines virtuelles nécessaires ;
 - préparer les templates dans GNS3.
 
-Aucune configuration réseau (adressage IP, DHCP, VLAN, routage ou pare-feu) n’est réalisée à ce stade.
+Aucune configuration réseau (adressage IP, DHCP, VLAN, routage ou pare-feu) n’est réalisée à ce stade.<br>
+<br>
 
 # Procédures :<br>
 <br>
@@ -46,7 +47,8 @@ Chaque système a été importé dans GNS3 sous forme de template distinct :
 La création des templates permet :
   - la standardisation des déploiements ;
   - la reproductibilité du laboratoire ;
-  - la duplication rapide d’instances si nécessaire.
+  - la duplication rapide d’instances si nécessaire.<br>
+<br>
 
 
 # Conclusion :<br>
