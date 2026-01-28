@@ -1,7 +1,8 @@
 # Configuration d'un service DHCP<br>
 <br>
 
-# Objectifs :
+# Objectifs :<br>
+<br>
 
 Mettre en place un serveur DHCP sous Ubuntu Server afin d’automatiser l’attribution des adresses IPv4 aux clients du réseau interne.
 
@@ -22,11 +23,11 @@ Le service devra :
 - Serveur DHCP : Ubuntu_Server-1 (e0)
 - Clients : Ubuntu_Desktop-1 (e0), Windows-10_Desktop-1 (e0)
 - Commutation : Switch1
-- Réseau : 10.10.10.0/24
-<br>
+- Réseau : 10.10.10.0/24<br>
 <br>
 
-# Procédures :
+# Procédures :<br>
+<br>
 
 ## I. Préparation du serveur
 
@@ -259,7 +260,6 @@ Capture d'écran : <br>
 <br>
 
 <img width="519" height="65" alt="image" src="https://github.com/user-attachments/assets/4e19e1a3-5b1b-4681-a549-24daf8f6df09" /><br>
-<br>
 <br>
 
 # Conclusion :
