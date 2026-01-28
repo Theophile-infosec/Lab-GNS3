@@ -1,6 +1,7 @@
-# I./ Mise en place de l’environnement du laboratoire
+# Mise en place de l’environnement du laboratoire<br>
+<br>
 
-## A. Objectifs :
+# Objectifs :
 
 Ce chapitre a pour objectif de mettre en place l’environnement de travail du laboratoire GNS3.
 
@@ -11,9 +12,9 @@ Il consiste à :
 
 Aucune configuration réseau (adressage IP, DHCP, VLAN, routage ou pare-feu) n’est réalisée à ce stade.
 
-## B. Procédures :
+# Procédures :
 
-### 1. Environnement technique
+## I. Environnement technique
 
 Le laboratoire est réalisé avec :
   - GNS3 (version : 2.2.55)
@@ -32,7 +33,7 @@ Les ressources allouées sont les suivantes :
   - Windows 10 : 3 vCPU / 4 Go RAM
   - Kali Linux : 3 vCPU / 4 Go RAM
 
-### 2. Création des templates
+## II. Création des templates
 
 Chaque système a été importé dans GNS3 sous forme de template distinct :
   - Template Ubuntu Server
@@ -46,7 +47,7 @@ La création des templates permet :
   - la duplication rapide d’instances si nécessaire.
 
 
-## C. Conclusion :
+# Conclusion :
 
 À l’issue de cette étape :
 
