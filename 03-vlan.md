@@ -229,7 +229,7 @@ Capture d'écran :<br>
 <br>
 
 
-## V. Adaptation du serveur DHCP aux VLANs
+## V. Adaptation du serveur DHCP aux VLAN
 
 ### 1. Modification netplan
 
