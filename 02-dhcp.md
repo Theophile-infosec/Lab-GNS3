@@ -1,6 +1,7 @@
 # II. Installation et configuration du service DHCP
 <br>
 <br>
+
 ## A. Objectifs :
 
 Mettre en place un serveur DHCP sous Ubuntu Server afin d’automatiser l’attribution des adresses IPv4 aux clients du réseau interne.
@@ -25,6 +26,7 @@ Le service devra :
 - Réseau : 10.10.10.0/24
 <br>
 <br>
+
 ## B. Préparation du serveur :
 
 ### 1. Attribution d’une adresse IP statique
