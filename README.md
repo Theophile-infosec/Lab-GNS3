@@ -2,8 +2,19 @@
 
 ## Objectifs
 
-## Outils
+Ce laboratoire consiste à concevoir et sécuriser une infrastructure réseau virtualisée sous GNS3.
 
+Il couvre :
+- Déploiement d’un serveur DHCP et DNS.
+- Segmentation du réseau via VLANs (802.1Q).
+- Mise en place d’un switch Linux et d’un pare-feu inter-VLAN (nftables).
+- Adaptation des services à une architecture multi-VLAN.
+- *Durcissement des systèmes Linux et Windows.* (⏳​ en cours de développement)
+- *Simulation d’attaques depuis Kali Linux et analyse des mécanismes de défense.* (⏳​ en cours de développement)
+
+L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segmentation et du contrôle des flux dans une architecture structurée et sécurisée.
+<br>
+<br>
 ## Documentation technique
 
 - [Mise en place de l’environnement du laboratoire](01-mise-en-place.md)
