@@ -1,8 +1,8 @@
-# II. Installation et configuration du service DHCP
+# Configuration d'un service DHCP
 <br>
 <br>
 
-## A. Objectifs :
+# Objectifs :
 
 Mettre en place un serveur DHCP sous Ubuntu Server afin d’automatiser l’attribution des adresses IPv4 aux clients du réseau interne.
 
@@ -27,7 +27,9 @@ Le service devra :
 <br>
 <br>
 
-## B. Préparation du serveur :
+# Procédures :
+
+## I. Préparation du serveur
 
 ### 1. Attribution d’une adresse IP statique
 
@@ -93,7 +95,7 @@ Capture d'écran : <br>
 
 
 
-## C. Installation du serveur DHCP :
+## II. Installation du serveur DHCP :
 
 ### 1. Mise à jour des paquets
 
@@ -112,7 +114,7 @@ Commande : *sudo apt install isc-dhcp-server*
 <br>
 
 
-## D. Configuration du serveur DHCP :
+## III. Configuration du serveur DHCP :
 
 ### 1. Déclaration de l’interface d’écoute
 
@@ -163,7 +165,7 @@ Capture d'écran : <br>
 <br>
 <br>
 
-## E. Activation du service :
+### 3. Activation du service :
 
 Redémarrage : *sudo systemctl restart isc-dhcp-server*
 
@@ -181,7 +183,7 @@ Capture d'écran : <br>
 <br>
 <br>
 
-## F. Vérification du fonctionnement :
+## IV. Vérification du fonctionnement
 
 ### 1. Vérification côté client Linux
 
@@ -261,7 +263,7 @@ Capture d'écran : <br>
 <br>
 <br>
 
-## G. Conclusion :
+# Conclusion :
 
 À l’issue de cette étape :
 
