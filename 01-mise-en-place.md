@@ -1,7 +1,8 @@
 # Mise en place de l’environnement du laboratoire<br>
 <br>
 
-# Objectifs :
+# Objectifs :<br>
+<br>
 
 Ce chapitre a pour objectif de mettre en place l’environnement de travail du laboratoire GNS3.
 
@@ -12,7 +13,8 @@ Il consiste à :
 
 Aucune configuration réseau (adressage IP, DHCP, VLAN, routage ou pare-feu) n’est réalisée à ce stade.
 
-# Procédures :
+# Procédures :<br>
+<br>
 
 ## I. Environnement technique
 
@@ -47,7 +49,8 @@ La création des templates permet :
   - la duplication rapide d’instances si nécessaire.
 
 
-# Conclusion :
+# Conclusion :<br>
+<br>
 
 À l’issue de cette étape :
 
