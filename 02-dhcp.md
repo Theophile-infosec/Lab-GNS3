@@ -37,8 +37,8 @@ Raisons :
 - Les clients doivent pouvoir identifier de manière constante l’équipement qui distribue les adresses.
 - L’adresse du serveur est utilisée comme passerelle par défaut.
 - Risque d’incohérence réseau en cas de changement d’IP.
-
-Le service DHCP ne peut pas s’auto-attribuer une adresse dynamique fiable avant son propre démarrage.
+- Le service DHCP ne peut pas s’auto-attribuer une adresse dynamique fiable avant son propre démarrage.
+<br>
 
 Fichier modifié : */etc/netplan/01-static.yaml*
 
@@ -49,7 +49,8 @@ Configuration appliquée :
 - Passerelle : 10.10.10.254
 - DNS : 8.8.8.8
 
-Commande d’application : *sudo netplan apply*
+Commande d’application : *sudo netplan apply*<br>
+<br>
 
 Capture d'écran : <br>
 <br>
@@ -60,12 +61,14 @@ Capture d'écran : <br>
 
 ### 2. Sécurisation des permissions du fichier
 
-Objectif : limiter l’exposition du fichier de configuration.
+**Objectif** : 
+- limiter l’exposition du fichier de configuration.
 
-Commande : *sudo chmod 600 /etc/netplan/01-static.yaml*
+Commande : 
+*sudo chmod 600 /etc/netplan/01-static.yaml*
 
-Vérification : *ls -l /etc/netplan/01-static.yaml*
-
+Vérification : *ls -l /etc/netplan/01-static.yaml*<br>
+<br>
 Capture d'écran : <br>
 <br>
 <img width="563" height="106" alt="image" src="https://github.com/user-attachments/assets/e842c99c-0aed-4756-a9b5-5e8e8934a70b" /><br>
@@ -76,10 +79,11 @@ Capture d'écran : <br>
 
 Un accès NAT temporaire est configuré afin de permettre l’installation des paquets nécessaires.
 
-Objectif :
+**Objectifs** :
 
 - Télécharger les dépendances <br>
-- Installer le serveur DHCP
+- Installer le serveur DHCP<br>
+<br>
 
 Capture d'écran : <br>
 <br>
@@ -100,7 +104,7 @@ Commande : *sudo apt update*
 
 Commande : *sudo apt install isc-dhcp-server*
 
-Objectif :
+**Objectif** :
 
 - Installer le daemon DHCP <br>
 - Préparer le service systemd
@@ -116,15 +120,16 @@ Fichier : */etc/default/isc-dhcp-server*
 
 Configuration :
 
-INTERFACESv4="ens3" <br>
-INTERFACESv6=""
+*INTERFACESv4="ens3" <br>
+INTERFACESv6=""*
 
-Objectif :
+**Objectif** :
 
-- Spécifier sur quelle interface le service doit écouter.
-
+- Spécifier sur quelle interface le service doit écouter.<br>
+<br>
 Capture d'écran : <br>
 <br>
+
 <img width="174" height="35" alt="image" src="https://github.com/user-attachments/assets/a7ad5bcd-a019-492c-a19d-5d10704d3555" /><br>
 <br>
 <br>
@@ -149,10 +154,11 @@ Paramètres définis :
 - Plage dynamique : 100–200 <br>
 - Passerelle : 10.10.10.1 <br>
 - DNS : 8.8.8.8 <br>
-- Temps de bail court pour environnement de test
-
+- Temps de bail court pour environnement de test<br>
+<br>
 Capture d'écran : <br>
 <br>
+
 <img width="349" height="115" alt="image" src="https://github.com/user-attachments/assets/a22c9cb0-776e-40fc-a0ab-2f7be6f5f0e2" /><br>
 <br>
 <br>
@@ -163,13 +169,14 @@ Redémarrage : *sudo systemctl restart isc-dhcp-server*
 
 Vérification : *sudo systemctl status isc-dhcp-server*
 
-Objectif :
+**Objectif** :
 
 - Appliquer la configuration <br>
-- Vérifier que le service est actif (running)
-
+- Vérifier que le service est actif (running)<br>
+<br>
 Capture d'écran : <br>
 <br>
+
 <img width="786" height="79" alt="image" src="https://github.com/user-attachments/assets/f5152346-5254-4adc-ad5c-1cc935c5d4e5" /><br>
 <br>
 <br>
@@ -184,14 +191,15 @@ Commandes :
 ip route<br>
 ping 10.10.10.1*
 
-Objectifs :
+**Objectifs** :
 
 - Vérifier l’attribution d’une IP dynamique<br>
 - Vérifier la route par défaut<br>
-- Vérifier la connectivité avec le serveur
-
+- Vérifier la connectivité avec le serveur<br>
+<br>
 Capture d'écran : <br>
 <br>
+
 <img width="1768" height="597" alt="image" src="https://github.com/user-attachments/assets/d55166ae-ab62-4a63-9db2-1746fe4dabf2" /><br>
 <br>
 <br>
@@ -200,17 +208,18 @@ Capture d'écran : <br>
 
 Commande : *journalctl -u isc-dhcp-server*
 
-Objectif :
+**Objectif** :
 
-Observer le processus DORA :
+- Observer le processus DORA :
 
-- DHCPDISCOVER<br>
-- DHCPOFFER<br>
-- DHCPREQUEST<br>
-- DHCPACK
-
+  - DHCPDISCOVER<br>
+  - DHCPOFFER<br>
+  - DHCPREQUEST<br>
+  - DHCPACK<br>
+<br>
 Capture d'écran : <br>
 <br>
+
 <img width="523" height="63" alt="image" src="https://github.com/user-attachments/assets/a2b767c7-4599-4d75-9630-46baaf93a285" /><br>
 <br>
 <br>
@@ -223,14 +232,15 @@ Commandes :
 ping 10.10.10.1<br>
 ping 10.10.10.101*
 
-Objectifs :
+**Objectifs** :
 
 - Vérifier l’attribution d’une IP dynamique<br>
 - Vérifier la passerelle<br>
-- Vérifier la connectivité inter-clients
-
+- Vérifier la connectivité inter-clients<br>
+<br>
 Capture d'écran : <br>
 <br>
+
 <img width="917" height="489" alt="image" src="https://github.com/user-attachments/assets/007398c4-b89f-4573-8c95-6d270c9cb14f" /><br>
 <br>
 <br>
@@ -240,12 +250,13 @@ Capture d'écran : <br>
 
 Commande : *journalctl -u isc-dhcp-server*
 
-Objectif :
+**Objectif** :
 
-- Confirmer le cycle DORA pour le client Windows.
-- 
+- Confirmer le cycle DORA pour le client Windows.<br>
+<br>
 Capture d'écran : <br>
 <br>
+
 <img width="519" height="65" alt="image" src="https://github.com/user-attachments/assets/4e19e1a3-5b1b-4681-a549-24daf8f6df09" /><br>
 <br>
 <br>
