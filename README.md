@@ -6,12 +6,12 @@
 
 ## Documentation technique
 
-- [Mise en place](01-mise-en-place.md)
+- [Mise en place de l’environnement du laboratoire](01-mise-en-place.md)
 
   1. Environnement technique
   2. Création des templates
   
-- [Configurer un service DHCP](02-dhcp.md)
+- [Configuration d'un service DHCP](02-dhcp.md)
   
   1. Préparation du serveur <br>
   2. Installation du serveur DHCP <br>
