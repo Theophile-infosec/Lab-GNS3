@@ -1,6 +1,15 @@
 # Configuration d'un service DHCP<br>
 <br>
 
+**Sommaire** : <br>
+
+I. [Préparation du serveur](#i-pr%C3%A9paration-du-serveur) <br>
+II. [Installation du serveur DHCP](#ii-installation-du-serveur-dhcp) <br>
+III. [Configuration du serveur DHCP](#iii-configuration-du-serveur-dhcp) <br>
+IV. [Vérification fonctionnelle](#iv-v%C3%A9rification-fonctionnelle) <br>
+
+<br>
+
 # Objectifs :<br>
 <br>
 
