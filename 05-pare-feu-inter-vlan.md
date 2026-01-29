@@ -1,6 +1,17 @@
 # Déploiement du service DNS<br>
 <br>
 
+**Sommaire** : <br>
+
+I. [Création du VLAN serveur & transformation du firewall en passerelle](#i-cr%C3%A9ation-du-vlan-serveur--transformation-du-firewall-en-passerelle) <br>
+II. [Mise à jour DHCP pour la nouvelle architecture](https://github.com/Theophile-infosec/Lab-GNS3/blob/main/05-pare-feu-inter-vlan.md#ii-mise-%C3%A0-jour-dhcp-pour-la-nouvelle-architecture) <br>
+III. [Mise à jour DNS pour la nouvelle architecture](https://github.com/Theophile-infosec/Lab-GNS3/blob/main/05-pare-feu-inter-vlan.md#iii-mise-%C3%A0-jour-dns-pour-la-nouvelle-architecture) <br>
+IV. [Mise en place du DHCP relay sur le pare-feu](https://github.com/Theophile-infosec/Lab-GNS3/blob/main/05-pare-feu-inter-vlan.md#iv-mise-en-place-du-dhcp-relay-sur-le-pare-feu) <br>
+V. [Définition de la politique nftables](https://github.com/Theophile-infosec/Lab-GNS3/blob/main/05-pare-feu-inter-vlan.md#v-d%C3%A9finition-de-la-politique-nftables) <br>
+VI. [Vérification fonctionnelle](https://github.com/Theophile-infosec/Lab-GNS3/blob/main/05-pare-feu-inter-vlan.md#vi-v%C3%A9rification-fonctionnelle) <br>
+
+<br>
+
 # Objectifs :<br>
 <br>
 
