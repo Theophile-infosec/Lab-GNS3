@@ -1,6 +1,17 @@
 # Déploiement du service DNS<br>
 <br>
 
+**Sommaire** : <br>
+
+I. [Installation et configuration initiale de Bind9](#i-installation-et-configuration-initiale-de-bind9)) <br>
+II. [Distribution du DNS via DHCP](#ii-distribution-du-dns-via-dhcp) <br>
+III. [Création d’une zone DNS interne](#iii-cr%C3%A9ation-dune-zone-dns-interne) <br>
+IV. [Création de la zone inverse](#iv-cr%C3%A9ation-de-la-zone-inverse) <br>
+V. [Validation côté clients](#v-validation-c%C3%B4t%C3%A9-clients) <br>
+
+<br>
+
+
 # Objectifs :<br>
 <br>
 
