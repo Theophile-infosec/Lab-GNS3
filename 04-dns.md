@@ -5,7 +5,7 @@
 <br>
 
 Déployer un serveur DNS interne (Bind9) afin de :
-- Fournir une résolution de noms interne du laboratoire.
+- Fournir une résolution de noms interne au laboratoire.
 - Centraliser la résolution DNS pour les VLAN 10 et VLAN 20.
 - Distribuer automatiquement le serveur DNS via DHCP.
 - Mettre en place une zone directe et une zone inverse.
@@ -79,7 +79,7 @@ Bind9 doit écouter sur le port 53 :
 - UDP → requêtes classiques
 - TCP → transferts de zone / réponses volumineuses
 
-Commande :
+Commande : <br>
 *ss -tulnp | grep :53*
 
 Explication :
@@ -99,7 +99,7 @@ Capture d'écran pour le protocole TCP : <br>
 
 ### 5. Test de fonctionnement local
 
-Commande :
+Commande : <br>
 *dig @127.0.0.1 localhost*
 
 **Objectifs** :
@@ -114,7 +114,7 @@ Capture d'écran : <br>
 
 ## II. Distribution du DNS via DHCP
 
-Fichier :
+Fichier : <br>
 */etc/dhcp/dhcpd.conf*
 
 Ajouts : <br>
@@ -152,7 +152,7 @@ Ajouts :<br>
 };*
 
 Explication :<br>
-- /etc/bind/db.lab.local → fichier de la zone directe DNS, contient toutes les règles de correspondance<br>
+- */etc/bind/db.lab.local* → fichier de la zone directe DNS, contient toutes les règles de correspondance<br>
 <br>
 Capture d'écran : <br>
 <br>
@@ -168,7 +168,7 @@ Fichier :<br>
 Explications :<br>
 - *ns.lab.local* → serveur faisant autorité.
 - *admin.lab.local* → contact admin (SOA : Start Of Authority).
-- Enregistrements A → résolution nom → IP.<br>
+- *Enregistrements A* → résolution nom → IP.<br>
 <br>
 Capture d'écran : <br>
 <br>
@@ -251,7 +251,7 @@ Capture d'écran : <br>
 ## V. Validation côté clients
 
 Commandes :<br>
-*dig -x 10.10.10.1* → Linux
+*dig -x 10.10.10.1* → Linux<br>
 *nslookup 10.10.10.1* → Windows<br>
 <br>
 Capture d'écran du client Linux : <br>
@@ -279,4 +279,5 @@ Le réseau dispose désormais :
 - d’une attribution IP dynamique (DHCP),
 - d’une résolution interne cohérente (DNS),
 - d’une segmentation réseau fonctionnelle (VLAN),<br>
+
 préparant l’intégration d’un filtrage inter-VLAN contrôlé dans le chapitre suivant.
