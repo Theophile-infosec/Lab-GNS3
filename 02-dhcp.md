@@ -183,7 +183,7 @@ Capture d'écran : <br>
 <br>
 <br>
 
-## IV. Vérification du fonctionnement
+## IV. Vérification fonctionnelle
 
 ### 1. Vérification côté client Linux
 
