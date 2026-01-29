@@ -346,8 +346,6 @@ Captures d'écran :<br>
 # Conclusion :<br>
 <br>
 
-Conclusion
-
 La segmentation réseau est opérationnelle :
 - VLAN 10 et VLAN 20 sont correctement isolés.
 - Le tagging 802.1Q est observable dans les trames Ethernet.
