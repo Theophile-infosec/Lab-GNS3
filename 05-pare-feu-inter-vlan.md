@@ -280,49 +280,7 @@ Fichier :<br>
 Mettre en place une segmentation stricte avec :
 - VLAN clients isolés
 - Accès contrôlé aux services
-- Firewall stateful opérationnel
-
-**Les règles mise en place** :<br>
-
-**Politique générale**<br>
-<br>
-    • *policy drop* sur *input* et forward : tout trafic est bloqué par défaut sauf s’il correspond à une règle explicite.<br>
-    • *policy accept* sur *output* : le firewall peut initier du trafic sortant librement.<br>
-    • *ct state established,related accept* : autorise automatiquement les paquets appartenant à une connexion déjà autorisée (firewall stateful).<br>
-  <br>
-**Chaîne input (trafic destiné au firewall)**<br>
-<br>
-    • *iif "lo" accept*<br>
-→ Autorise le trafic local interne (loopback).<br>
-<br>
-    • *iifname { "ens3.10","ens3.20" } udp dport 67 accept*<br>
-→ Autorise les requêtes DHCP des VLAN clients vers le firewall (fonction DHCP relay).<br>
-<br>
-    • *iifname "ens3.30" ip saddr 10.10.30.1 udp dport 67 accept*<br>
-→ Autorise les réponses du serveur DHCP (10.10.30.1) vers le firewall relay.<br>
-<br>
-    • *iifname "ens3.30" tcp dport 22 accept*<br>
-→ Autorise l’accès SSH d’administration depuis le VLAN30 uniquement.<br>
-<br>
-**Chaîne forward (trafic inter-VLAN)**<br>
-<br>
-    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 udp dport 53 accept*<br>
-→ Autorise les requêtes DNS UDP des VLAN clients vers le serveur DNS en VLAN30.<br>
-<br>
-    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 tcp dport 53 accept*<br>
-→ Autorise les requêtes DNS TCP (fallback ou réponses volumineuses).<br>
-<br>
-    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 udp dport 67 accept*<br>
-→ Autorise le trafic DHCP relay vers le serveur DHCP en VLAN30.<br>
-<br>
-    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 ip protocol icmp accept*<br>
-→ Autorise les tests de connectivité (ping) vers le serveur.<br>
-<br>
-**Résumé des règles**<br>
-
-- La configuration met en place une segmentation stricte entre VLAN clients (ens3.10, ens3.20) et VLAN serveurs (ens3.30).
-- Seuls les flux nécessaires au fonctionnement de l’infrastructure sont autorisés : DNS, DHCP via relay et ICMP vers le serveur, ainsi que l’administration SSH depuis le VLAN serveur.
-- Tout autre trafic inter-VLAN est bloqué par la politique par défaut, ce qui garantit un cloisonnement réseau minimaliste et contrôlé. <br>
+- Firewall stateful opérationnel<br>
 <br>
 Capture d'écran : <br>
 <br>
@@ -330,6 +288,147 @@ Capture d'écran : <br>
 <br>
 <br>
 
+**Les règles mises en place** :
 
+<br>
+
+**Politique générale**
+  - *policy drop* sur *input* et forward : tout trafic est bloqué par défaut sauf s’il correspond à une règle explicite.
+  - *policy accept* sur *output* : le firewall peut initier du trafic sortant librement.
+  - *ct state established,related accept* : autorise automatiquement les paquets appartenant à une connexion déjà autorisée (firewall stateful).
+
+  <br>
+  
+**Chaîne input (trafic destiné au firewall)**
+<br>
+<br>
+    • *iif "lo" accept*
+<br>
+→ Autorise le trafic local interne (loopback).
+<br>
+<br>
+    • *iifname { "ens3.10","ens3.20" } udp dport 67 accept*
+<br>
+→ Autorise les requêtes DHCP des VLAN clients vers le firewall (fonction DHCP relay).
+<br>
+<br>
+    • *iifname "ens3.30" ip saddr 10.10.30.1 udp dport 67 accept*
+  <br>
+→ Autorise les réponses du serveur DHCP (10.10.30.1) vers le firewall relay.
+<br>
+<br>
+    • *iifname "ens3.30" tcp dport 22 accept*
+  <br>
+→ Autorise l’accès SSH d’administration depuis le VLAN30 uniquement.
+<br>
+<br>
+**Chaîne forward (trafic inter-VLAN)**
+  <br>
+<br>
+    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 udp dport 53 accept*
+  <br>
+→ Autorise les requêtes DNS UDP des VLAN clients vers le serveur DNS en VLAN30.
+<br>
+<br>
+    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 tcp dport 53 accept*
+  <br>
+→ Autorise les requêtes DNS TCP (fallback ou réponses volumineuses).
+<br>
+<br>
+    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 udp dport 67 accept*
+  <br>
+→ Autorise le trafic DHCP relay vers le serveur DHCP en VLAN30.
+<br>
+<br>
+    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 ip protocol icmp accept*
+  <br>
+→ Autorise les tests de connectivité (ping) vers le serveur.
+<br>
+<br>
+**Résumé des règles**<br>
+
+- La configuration met en place une segmentation stricte entre VLAN clients (ens3.10, ens3.20) et VLAN serveurs (ens3.30).
+- Seuls les flux nécessaires au fonctionnement de l’infrastructure sont autorisés : DNS, DHCP via relay et ICMP vers le serveur, ainsi que l’administration SSH depuis le VLAN serveur.
+- Tout autre trafic inter-VLAN est bloqué par la politique par défaut, ce qui garantit un cloisonnement réseau minimaliste et contrôlé.<br>
+<br>
+<br>
+
+## VI. Vérification fonctionnelle
+
+### 1. Validation DHCP via relay
+
+**Objectif** :
+- Vérifier le fonctionnement du relay à travers le firewall.<br>
+<br>
+Capture d'écran Wireshark DHCP côté client Windows : <br>
+<br>
+<img width="704" height="77" alt="image" src="https://github.com/user-attachments/assets/79ad5b79-1749-4bf3-af52-e1277844eae9" /><br>
+<br>
+Capture d'écran Wireshark DHCP côté client Linux : <br>
+<br>
+<img width="696" height="74" alt="image" src="https://github.com/user-attachments/assets/a974bbb0-7ce0-4620-bbc6-a3dcfaf86e41" /><br>
+<br>
+<br>
+
+### 2. Segmentation VLAN
+
+**Objectif** :
+- Vérifier l'isolation des VLAN.<br>
+<br>
+Capture d'écran Ping VLAN10 → VLAN20 : <br>
+<br>
+<img width="685" height="112" alt="image" src="https://github.com/user-attachments/assets/66ad5753-fcee-4ba1-bc8e-a5692d49f3d3" /><br>
+<br>
+Capture d'écran Ping VLAN20 → VLAN10 : <br>
+<br>
+<img width="551" height="100" alt="image" src="https://github.com/user-attachments/assets/ed3b26f0-cf97-40a0-b70b-ccd7e826e691" /><br>
+<br>
+<br>
+
+### 3. Accès contrôlé au VLAN serveur
+
+**Objectif** :
+- Valider l’autorisation vers le VLAN serveur.<br>
+<br>
+Capture d'écran Ping VLAN10 → VLAN30 : <br>
+<br>
+<img width="593" height="94" alt="image" src="https://github.com/user-attachments/assets/9856298f-226a-4a44-961c-e3222fa21f17" /><br>
+<br>
+Capture d'écran Ping VLAN20 → VLAN30 : <br>
+<br>
+<img width="543" height="72" alt="image" src="https://github.com/user-attachments/assets/ea361ea1-4d7a-4788-83a8-3abbe37cca30" /><br>
+<br>
+<br>
+
+### 4. Résolution DNS
+
+**Objectif** :
+Valider : <br>
+- DNS forward
+- DNS reverse
+- Cohérence IP / nom
+- Prise en compte du serial<br>
+<br>
+Capture d'écran Forward lookup & Reverse lookup Windows : <br>
+<br>
+<img width="357" height="104" alt="image" src="https://github.com/user-attachments/assets/d6286118-fe0c-47cf-9ccb-f838a3ef943f" /><br>
+<img width="309" height="108" alt="image" src="https://github.com/user-attachments/assets/55ee3da9-0423-4a12-aeee-7b8bafd0bc90" /><br>
+<br>
+Capture d'écran Forward lookup & Reverse lookup Linux : <br>
+<br>
+<img width="764" height="155" alt="image" src="https://github.com/user-attachments/assets/712f8674-0c3c-4d9a-9039-7ec838945f4d" /><br>
+<img width="709" height="60" alt="image" src="https://github.com/user-attachments/assets/224fa8c0-3db8-4efb-9ba0-e54708b88bb3" /><br>
+<br>
+<br>
+
+# Conclusion :<br>
+<br>
+
+- DHCP fonctionnel via relay
+- Segmentation inter-VLAN opérationnelle
+- Accès contrôlé au VLAN serveur
+- DNS forward & reverse cohérent
+- Firewall stateful actif
+- Architecture prête pour scénarios d’attaque / défense
 
 
