@@ -236,6 +236,12 @@ Commande : <br>
 Commande : <br>
 *sudo nano /etc/default/isc-dhcp-relay*
 
+<br>
+Capture d'écran : <br>
+<br>
+<img width="590" height="85" alt="image" src="https://github.com/user-attachments/assets/b6ca20fe-32da-4a4d-9e5d-d3decb564e16" /><br>
+<br>
+
 Détails :
 
 *SERVERS*
@@ -252,10 +258,6 @@ Détails :
 - Recevoir les requêtes DHCP des VLAN clients
 - Les relayer vers le serveur DHCP
 - Transmettre les réponses DHCP aux bons VLANs.<br>
-<br>
-Capture d'écran : <br>
-<br>
-<img width="590" height="85" alt="image" src="https://github.com/user-attachments/assets/b6ca20fe-32da-4a4d-9e5d-d3decb564e16" /><br>
 <br>
 <br>
 
@@ -402,7 +404,7 @@ Capture d'écran Ping VLAN20 → VLAN30 : <br>
 
 ### 4. Résolution DNS
 
-**Objectif** :
+**Objectif** :<br>
 Valider : <br>
 - DNS forward
 - DNS reverse
