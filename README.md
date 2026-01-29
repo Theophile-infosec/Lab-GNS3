@@ -1,4 +1,4 @@
-# ⚠️ (EN COURS DE CRÉATION) Lab personnel GNS3 & VMware
+# Lab personnel GNS3 & VMware
 
 ## Objectifs
 
@@ -48,10 +48,10 @@ L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segm
 
 - [Ajout d'un Pare-feu inter-VLAN](05-pare-feu-inter-vlan.md)
 
-  1. Création d'un VLAN dédié au serveur & transformation du pare-feu en passerelle unique inter-VLAN <br>
-  2. Définition de la politique nftables minimale <br>
-  3. Mise à jour du serveur DHCP et DNS pour le nouveau design <br>
+  1. Création du VLAN serveur & transformation du firewall en passerelle <br>
+  2. Mise à jour DHCP pour la nouvelle architecture <br>
+  3. Mise à jour DNS pour la nouvelle architecture <br>
   4. Mise en place du DHCP relay sur le pare-feu
-  5. Amélioration des règles du pare-feu
-  
+  5. Définition de la politique nftables
+  6. Vérification fonctionnelle
 
