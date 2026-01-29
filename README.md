@@ -27,7 +27,7 @@ L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segm
   1. Préparation du serveur <br>
   2. Installation du serveur DHCP <br>
   3. Configuration du serveur DHCP <br>
-  4. Vérification du fonctionnement
+  4. Vérification fonctionnelle
   
 - [Structuration du réseau en VLAN](03-vlan.md)
   
@@ -40,8 +40,11 @@ L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segm
   
 - [Déploiement du service DNS](04-dns.md)
   
-  1. Installation d’un serveur DNS <br>
-  2. Création d’une zone DNS interne
+  1. Installation et configuration initiale de Bind9 <br>
+  2. Distribution du DNS via DHCP <br>
+  3. Création d’une zone DNS interne <br>
+  4. Création de la zone inverse <br>
+  5. Validation côté clients
 
 - [Ajout d'un Pare-feu inter-VLAN](05-pare-feu-inter-vlan.md)
 
