@@ -1,6 +1,17 @@
 # Structuration du réseau en VLAN<br>
 <br>
 
+**Sommaire** : <br>
+
+I. [Mise en place d’un VLAN 10 (configuration non persistante)](#i-mise-en-place-dun-vlan-10-configuration-non-persistante) <br>
+II. [Mise en place d’un switch Linux (Bridge)](#ii-mise-en-place-dun-switch-linux-bridge) <br>
+III. [Vérification du fonctionnement de la configuration non persistante](#iii-v%C3%A9rification-du-fonctionnement-de-la-configuration-non-persistante) <br>
+IV. [Configuration persistante du switch Linux](#iv-configuration-persistante-du-switch-linux) <br>
+V. [Adaptation du serveur DHCP aux VLAN](#v-adaptation-du-serveur-dhcp-aux-vlan) <br>
+VI. [Vérification fonctionnelle](#vi-v%C3%A9rification-fonctionnelle) <br>
+
+<br>
+
 # Objectifs :<br>
 <br>
 Mettre en place une segmentation logique du réseau à l’aide de VLAN (802.1Q) afin :
