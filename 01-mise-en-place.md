@@ -1,6 +1,13 @@
 # Mise en place de l’environnement du laboratoire<br>
 <br>
 
+**Sommaire** : <br>
+
+I. [Environnement technique](#i-environnement-technique) <br>
+II. [Création des templates](#ii-cr%C3%A9ation-des-templates) <br>
+
+<br>
+
 # Objectifs :<br>
 <br>
 
