@@ -34,7 +34,7 @@ Deux VLANs sont définis :
 - Serveur DHCP : Linux_Server-1 (e0)
 - Clients : Linux_Desktop-1 (e0), Windows-10_Desktop-1 (e0)
 - Commutation : Linux-bridge_Switch
-- Réseau : 10.10.10.0/24<br>
+- Plan d'adressage : VLAN10 → 10.10.10.0/24, VLAN20 → 10.10.20.0/24<br>
 <br>
 
 # Procédures :<br>
