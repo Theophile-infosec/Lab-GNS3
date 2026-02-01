@@ -30,7 +30,7 @@ Transformer l’architecture initiale en une topologie segmentée avec :
 
 - Serveur DHCP : Linux_Server-1 (e0)
 - Clients : Linux_Desktop-1 (e0), Windows-10_Desktop-1 (e0)
-- Commutation : Linux-bridge_Switch
+- Commutation : Linux_Switch
 - Pare-feu : Linux_Fierwall (e0)
 - Plan d'adressage : VLAN10 → 10.10.10.0/24, VLAN20 → 10.10.20.0/24, VLAN30 → 10.10.30.0/24<br>
 <br>
@@ -51,7 +51,7 @@ Ajout :
 - Ports access pour VLAN 10, 20, 30
 
 **Objectif** :
-- Segmenter physiquement et logiquement le VLAN serveur afin d’isoler les services (DHCP/DNS) des VLAN clients.<br>
+- Segmenter logiquement le VLAN serveur afin d’isoler les services (DHCP/DNS) des VLAN clients.<br>
 <br>
 Capture d'écran : <br>
 <br>
@@ -306,7 +306,7 @@ Capture d'écran : <br>
 <br>
 
 **Politique générale**
-  - *policy drop* sur *input* et forward : tout trafic est bloqué par défaut sauf s’il correspond à une règle explicite.
+  - *policy drop* sur *input* et *forward* : tout trafic est bloqué par défaut sauf s’il correspond à une règle explicite.
   - *policy accept* sur *output* : le firewall peut initier du trafic sortant librement.
   - *ct state established,related accept* : autorise automatiquement les paquets appartenant à une connexion déjà autorisée (firewall stateful).
 
@@ -442,6 +442,7 @@ Capture d'écran Forward lookup & Reverse lookup Linux : <br>
 - Accès contrôlé au VLAN serveur
 - DNS forward & reverse cohérent
 - Firewall stateful actif
-- Architecture prête pour scénarios d’attaque / défense
+
+La configuration de l'architecture se terminera avec un durcissement des systèmes Linux et Windows.
 
 
