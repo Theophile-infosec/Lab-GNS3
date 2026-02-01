@@ -95,7 +95,7 @@ Capture d'écran : <br>
 
 ## II. Mise en place d’un switch Linux (Bridge)
 
-Un switch logiciel est déployé afin de simuler une commutation VLAN-aware.
+Un switch logiciel est déployé afin d'assurer la commutation des trames et la segmentation du réseau.
 
 ### 1. Création d’un bridge
 
@@ -205,7 +205,7 @@ Fichier : <br>
 - Déclaration du bridge br0
 - Association des interfaces physiques
 - STP désactivé (pas de boucle possible)
-- dhcp4: false<br>
+- *dhcp4: false* car bridge linux = commutateur de couche 2<br>
 <br>
 Capture d'écran : <br>
 <br>
