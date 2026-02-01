@@ -32,7 +32,7 @@ Transformer l’architecture initiale en une topologie segmentée avec :
 - Clients : Linux_Desktop-1 (e0), Windows-10_Desktop-1 (e0)
 - Commutation : Linux-bridge_Switch
 - Pare-feu : Linux_Fierwall (e0)
-- Réseau : 10.10.10.0/24<br>
+- Plan d'adressage : VLAN10 → 10.10.10.0/24, VLAN20 → 10.10.20.0/24, VLAN30 → 10.10.30.0/24<br>
 <br>
 
 # Procédures :<br>
