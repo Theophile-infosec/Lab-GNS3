@@ -18,7 +18,7 @@ VI. [Vérification fonctionnelle](#vi-v%C3%A9rification-fonctionnelle) <br>
 Transformer l’architecture initiale en une topologie segmentée avec :
 - Un VLAN dédié au serveur (VLAN 30)
 - Un pare-feu Linux jouant le rôle de passerelle inter-VLAN
-- Une politique de filtrage restrictive (deny by default)
+- Une politique de filtrage restrictive
 - Un routage contrôlé entre VLAN clients et VLAN serveur
 - Intégration DHCP relay + DNS
 
