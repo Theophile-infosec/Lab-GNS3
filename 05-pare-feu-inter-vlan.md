@@ -297,7 +297,8 @@ Mettre en place une segmentation stricte avec :
 <br>
 Capture d'écran : <br>
 <br>
-<img width="898" height="373" alt="image" src="https://github.com/user-attachments/assets/a3ba7c98-e74f-4e7e-b346-f2eb7653ac26" /><br>
+<img width="891" height="367" alt="image" src="https://github.com/user-attachments/assets/3cf56888-5611-4aad-a6f8-5102f964d469" />
+<br>
 <br>
 <br>
 
@@ -325,37 +326,32 @@ Capture d'écran : <br>
 → Autorise les requêtes DHCP des VLAN clients vers le firewall (fonction DHCP relay).
 <br>
 <br>
-    • *iifname "ens3.30" ip saddr 10.10.30.1 udp dport 67 accept*
-  <br>
-→ Autorise les réponses du serveur DHCP (10.10.30.1) vers le firewall relay.
-<br>
-<br>
     • *iifname "ens3.30" tcp dport 22 accept*
   <br>
 → Autorise l’accès SSH d’administration depuis le VLAN30 uniquement.
 <br>
 <br>
+    • *iifname "ens3.30" ip saddr 10.10.30.1 udp dport 67 accept*
+  <br>
+→ Autorise les réponses du serveur DHCP (10.10.30.1) vers le firewall relay.
+<br>
+<br>
 **Chaîne forward (trafic inter-VLAN)**
   <br>
-<br>
-    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 udp dport 53 accept*
-  <br>
-→ Autorise les requêtes DNS UDP des VLAN clients vers le serveur DNS en VLAN30.
-<br>
-<br>
-    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 tcp dport 53 accept*
-  <br>
-→ Autorise les requêtes DNS TCP (fallback ou réponses volumineuses).
-<br>
-<br>
-    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 udp dport 67 accept*
-  <br>
-→ Autorise le trafic DHCP relay vers le serveur DHCP en VLAN30.
-<br>
 <br>
     • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 ip protocol icmp accept*
   <br>
 → Autorise les tests de connectivité (ping) vers le serveur.
+<br>
+<br>
+   • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 tcp dport 53 accept*
+  <br>
+→ Autorise les requêtes DNS TCP (fallback ou réponses volumineuses).
+<br>
+<br>
+    • *iifname { "ens3.10","ens3.20" } oifname "ens3.30" ip daddr 10.10.30.1 udp dport 53 accept*
+  <br>
+→ Autorise les requêtes DNS UDP des VLAN clients vers le serveur DNS en VLAN30.
 <br>
 <br>
 **Résumé des règles**<br>
