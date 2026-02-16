@@ -131,3 +131,38 @@ Commande : <br>
 
 ### 3. Sécurisation des fichiers critiques DNS
 
+#### a. Identifier les fichiers sensibles
+
+Commande : <br>
+*ls -l /etc/bind/*
+
+**Objectif** :
+- Identifier les fichiers de zone et fichiers de configuration.<br>
+<br>
+Capture d'écran : <br>
+<br>
+<img width="529" height="275" alt="image" src="https://github.com/user-attachments/assets/adaf659d-1334-48fe-ae78-29d743df5ad8" /><br>
+<br>
+<br>
+
+#### b. Réduction des permissions
+
+Commandes : <br>
+*sudo chmod 640 /etc/bind/db.lab.local<br>
+sudo chmod 640 /etc/bind/db.10.10.10.30<br>
+sudo chmod 640 /etc/bind/named.conf.local<br>
+sudo chmod 640 /etc/bind/named.conf.options<br>*
+
+**Objectif** :
+Appliquer le principe du moindre privilège :
+- *root* → lecture/écriture
+- *bind* → lecture
+- *others* → aucun accès<br>
+<br>
+Capture d'écran : <br>
+<br>
+<img width="615" height="209" alt="image" src="https://github.com/user-attachments/assets/61d95424-d3ae-45a7-b8ce-acde1d16997a" /><br>
+<br>
+<br>
+
+### 4. Sécurisation des fichiers DHCP
