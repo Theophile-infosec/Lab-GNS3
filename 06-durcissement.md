@@ -366,10 +366,10 @@ Capture d'écran : <br>
 
 # Conclusion :<br>
 <br>
-Le durcissement mis en place :
-- Supprime les privilèges excessifs
-- Applique le principe du moindre privilège
-- Isole les comptes
-- Réduit l’exposition réseau locale
-
+Le durcissement mis en place :<br>
+- Supprime les privilèges excessifs<br>
+- Applique le principe du moindre privilège<br>
+- Isole les comptes<br>
+- Réduit l’exposition réseau locale<br>
+<br>
 La surface d’attaque est volontairement réduite tout en conservant un environnement exploitable pour les scénarios offensifs ultérieurs.
