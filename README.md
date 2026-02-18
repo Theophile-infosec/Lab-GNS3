@@ -9,7 +9,7 @@ Il couvre :
 - Segmentation du réseau via VLAN (802.1Q).
 - Mise en place d’un switch Linux et d’un pare-feu inter-VLAN (nftables).
 - Adaptation des services à une architecture multi-VLAN.
-- *Durcissement des systèmes Linux et Windows.* (⏳​ en cours de développement)
+- Durcissement des systèmes Linux et Windows.
 - *Simulation d’attaques depuis Kali Linux et analyse des mécanismes de défense.* (⏳​ en cours de développement)
 
 L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segmentation et du contrôle des flux dans une architecture structurée et sécurisée.
@@ -54,4 +54,9 @@ L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segm
   4. Mise en place du DHCP relay sur le pare-feu
   5. Définition de la politique nftables
   6. Vérification fonctionnelle
+ 
+- [Durcissement des systèmes Linux et Windows](06-durcissement.md)
+
+  1. Durcissement du serveur Linux <br>
+  2. Durcissement des clients <br>
 
