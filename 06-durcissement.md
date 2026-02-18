@@ -1,10 +1,10 @@
-# (EN COURS) Durcissement des systèmes Linux et Windows<br>
+# Durcissement des systèmes Linux et Windows<br>
 <br>
 
 **Sommaire** : <br>
 
-I.  <br>
-II.  <br>
+I. [Durcissement du serveur Linux](#i-durcissement-du-serveur-linux) <br>
+II. [Durcissement des clients](#ii-durcissement-des-clients) <br>
 
 <br>
 
