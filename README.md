@@ -69,3 +69,12 @@ L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segm
   1. Reconnaissance active (approche pentest) <br>
   2. Reconnaissance passive (simulation attaquant) <br>
 
+- [Conclusion du laboratoire](08-conclusion.md)
+
+  1. Objectifs <br>
+  2. Architecture <br>
+  3. Résultats <br>
+  4. Surface d'attaque <br>
+  5. Limites <br>
+  6. Suites <br>
+        
