@@ -1,4 +1,4 @@
-# Lab personnel GNS3 & VMware
+# Infrastructure réseau sécurisée 
 
 <img width="650" height="470" alt="image" src="https://github.com/user-attachments/assets/8747907e-ec5a-4af8-af49-e05fb069dd88" /><br>
 **Topologie finale*
