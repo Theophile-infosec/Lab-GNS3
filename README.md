@@ -60,3 +60,8 @@ L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segm
   1. Durcissement du serveur Linux <br>
   2. Durcissement des clients <br>
 
+- [Pentest & Simulation d’attaques depuis Kali Linux](07-pentest-kali.md)
+
+  1. Reconnaissance active (approche pentest <br>
+  2. Reconnaissance passive (simulation attaquant) <br>
+
