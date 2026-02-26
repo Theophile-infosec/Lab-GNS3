@@ -14,7 +14,7 @@ Il couvre :
 - Mise en place d’un switch Linux et d’un pare-feu inter-VLAN (nftables).
 - Adaptation des services à une architecture multi-VLAN.
 - Durcissement des systèmes Linux et Windows.
-- *Simulation d’attaques depuis Kali Linux et analyse des mécanismes de défense.* (⏳​ en cours de développement)
+- Simulation d’attaques depuis Kali Linux et analyse des mécanismes de défense.
 
 L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segmentation et du contrôle des flux dans une architecture structurée et sécurisée.
 <br>
