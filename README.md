@@ -66,6 +66,6 @@ L’objectif est de démontrer la maîtrise des fondamentaux réseau, de la segm
 
 - [Pentest & Simulation d’attaques depuis Kali Linux](07-pentest-kali.md)
 
-  1. Reconnaissance active (approche pentest <br>
+  1. Reconnaissance active (approche pentest) <br>
   2. Reconnaissance passive (simulation attaquant) <br>
 
